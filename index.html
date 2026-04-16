@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Voter Intelligence - Williamson County</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Texas Voter Intelligence</h1>
+            <p>Enter your Ballot Style number to see your specific candidates and propositions.</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="ballot-input">Ballot Style Number (e.g., 39210 or BS10):</label>
+                <div class="search-group">
+                    <input type="text" id="ballot-input" placeholder="Enter number here..." autofocus>
+                    <button id="submit-btn">Show My Ballot</button>
+                </div>
+                <div id="error-display" class="hidden"></div>
+            </div>
+
+            <div id="results-display" class="hidden">
+                </div>
+        </main>
+
+        <footer>
+            <p>Non-partisan information for the May 2nd Election.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

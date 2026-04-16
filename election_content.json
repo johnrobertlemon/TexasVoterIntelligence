@@ -1,0 +1,149 @@
+{
+  "election_metadata": {
+    "election_name": "Joint General and Special Elections - Williamson County",
+    "election_date": "2026-05-02"
+  },
+  "contests": {
+    "GTN_PROP_A": {
+      "element_id": "EL_001",
+      "type": "proposition",
+      "jurisdiction": "City of Georgetown",
+      "title": "Proposition A",
+      "ballot_language": "The sale of a portion of the City of Georgetown, Texas's water utility system located outside of its corporate limits to National Utility Infrastructure in the aggregate principal amount of not less than $20,000,000.00.",
+      "content": {
+        "general_info": [],
+        "arguments_for": [],
+        "arguments_against": []
+      }
+    },
+    "GTN_COUNCIL_D6": {
+      "element_id": "EL_002",
+      "type": "office",
+      "jurisdiction": "City of Georgetown",
+      "title": "City Council District 6",
+      "general_info": [
+        {
+          "Online magazine Community Impact page on elections": "https://communityimpact.com/austin/georgetown/election/2026/03/18/qa-meet-the-candidates-running-for-georgetown-city-council-district-6-in-may/",
+          "City of Georgetown Elections Page": "https://www.georgetowntexas.gov/government/secretarys_office/elections.php?_gl=1*1rgrnkf*_gcl_au*NjQwMTMwNTY1LjE3NzM0MTE1MTQ.*_ga*MTU0OTc5NzgzMi4xNzczNDExNTE0*_ga_N2ENF3W5F5*czE3NzU1ODkyNTAkbzQkZzAkdDE3NzU1ODkyNTAkajYwJGwwJGgw"
+        }
+      ],
+      "candidates": [
+        {
+          "name": "Emily Kaye Kipp",
+          "content": { "support_urls": [], "oppose_urls": [] }
+        },
+        {
+          "name": "Jake French",
+          "content": { "support_urls": [], "oppose_urls": [] }
+        }
+      ]
+    },
+    "CP_MAYOR": {
+      "element_id": "EL_003",
+      "type": "office",
+      "jurisdiction": "City of Cedar Park",
+      "general_info": [],
+      "candidates": [
+        {
+          "name": "Jim Penniman-Morin",
+          "content": { "support_urls": [], "oppose_urls": [] }
+        },
+        {
+          "name": "Dean Doscher",
+          "content": { "support_urls": [], "oppose_urls": [] }
+        }
+      ]
+    },
+    "CP_COUNCIL_P2": {
+      "element_id": "EL_004",
+      "type": "office",
+      "jurisdiction": "City of Cedar Park",
+      "general_info": [],
+      "candidates": [
+        {
+          "name": "Mel Kirkland",
+          "content": { "support_urls": [], "oppose_urls": [] }
+        },
+        {
+          "name": "Darron Jurajda",
+          "content": { "support_urls": [], "oppose_urls": [] }
+        }
+      ]
+    },
+    "RR_MAYOR": {
+      "element_id": "EL_005",
+      "type": "office",
+      "jurisdiction": "City of Round Rock",
+      "general_info": [],
+      "candidates": [
+        {
+          "name": "Kelly Hall",
+          "content": { "support_urls": [], "oppose_urls": [] }
+        },
+        {
+          "name": "Craig Morgan",
+          "content": { "support_urls": [], "oppose_urls": [] }
+        }
+      ]
+    },
+    "RR_PROP_A": {
+      "element_id": "EL_006",
+      "type": "proposition",
+      "jurisdiction": "City of Round Rock",
+      "title": "Proposition A (Electronic Message Centers)",
+      "ballot_language": "Amending the City Charter to allow up to 12 private electronic message centers along IH-35 and SH-45.",
+      "content": {
+        "general_info": [],
+        "arguments_for": [],
+        "arguments_against": []
+      }
+    },
+    "BART_COUNCIL": {
+      "element_id": "EL_007",
+      "type": "office",
+      "jurisdiction": "City of Bartlett",
+      "general_info": [],
+      "candidates": [
+        { "name": "Jackie Ivicic", "content": { "support_urls": [], "oppose_urls": [] } },
+        { "name": "Jennifer Tucker", "content": { "support_urls": [], "oppose_urls": [] } },
+        { "name": "Ruth Diaz", "content": { "support_urls": [], "oppose_urls": [] } }
+      ]
+    },
+    "HUTTO_COUNCIL_P1": {
+      "element_id": "EL_008",
+      "type": "office",
+      "jurisdiction": "City of Hutto",
+      "general_info": [],
+      "candidates": [
+        { "name": "Jerrel W. Reynolds", "content": { "support_urls": [], "oppose_urls": [] } },
+        { "name": "Sarosh Jafri", "content": { "support_urls": [], "oppose_urls": [] } }
+      ]
+    },
+    "LIBERTY_HILL_PROP_A": {
+      "element_id": "EL_009",
+      "type": "proposition",
+      "jurisdiction": "City of Liberty Hill",
+      "title": "Proposition A",
+      "ballot_language": "The reauthorization of the local sales and use tax in the City of Liberty Hill at the rate of 0.25% to continue providing revenue for maintenance and repair of municipal streets.",
+      "content": {
+        "general_info": [],
+        "arguments_for": [],
+        "arguments_against": []
+      }
+    },
+    "BART_ISD_PROP_A": {
+      "element_id": "EL_010",
+      "type": "proposition",
+      "jurisdiction": "Bartlett ISD",
+      "title": "Proposition A (School Building Bonds)",
+      "ballot_language": "The issuance of $12,500,000 of bonds for school buildings and the levying of a tax in payment thereof. This is a property tax increase.",
+      "content": {
+        "general_info": [],
+        "arguments_for": [],
+        "arguments_against": []
+      }
+    }
+  }
+}
+
+
