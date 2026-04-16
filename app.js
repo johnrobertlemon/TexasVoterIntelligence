@@ -1,56 +1,37 @@
-const DATA_URLS = {
-    styles: './precinct_ballot_style.json',
-    content: './election_content.json'
-};
-
-document.getElementById('submit-btn').addEventListener('click', handleSubmission);
-
-async function handleSubmission() {
-    const inputField = document.getElementById('ballot-input');
-    const resultDiv = document.getElementById('results-display');
-    const errorDiv = document.getElementById('error-display');
-    
-    // 1. Extract and Validate
-    const digits = inputField.value.replace(/\D/g, '');
-    const styleNumber = parseInt(digits.slice(-2), 10);
-
-    if (isNaN(styleNumber) || styleNumber < 1 || styleNumber > 35) {
-        errorDiv.innerHTML = `<div class="error-box">
-            <strong>Invalid Entry:</strong> Please enter a number between 1 and 35. 
-            (Example: "39210" or "BS10")
-        </div>`;
-        errorDiv.classList.remove('hidden');
-        resultDiv.classList.add('hidden');
-        return;
-    }
-
-    // 2. Clear Errors and Fetch
-    errorDiv.classList.add('hidden');
-    const bStyleKey = `BS${styleNumber}`;
-
-    try {
+try {
         const [stylesRes, contentRes] = await Promise.all([
             fetch(DATA_URLS.styles),
             fetch(DATA_URLS.content)
         ]);
 
-        const styleMap = await stylesRes.json();
-        const contentLibrary = await contentRes.json();
+        if (!stylesRes.ok || !contentRes.ok) {
+            throw new Error("One or more data files could not be found. Check your filenames on GitHub.");
+        }
 
-        const selectedStyle = styleMap[bStyleKey];
+        const stylesData = await stylesRes.json();
+        const contentData = await contentRes.json();
+
+        // Fix 1: Look inside the wrapper key "ballot_style_mapping"
+        const selectedStyle = stylesData.ballot_style_mapping[bStyleKey];
 
         if (!selectedStyle) {
             throw new Error(`Style ${bStyleKey} not found in database.`);
         }
 
-        // 3. Render Results
         let html = `<h2>Ballot Style: ${bStyleKey}</h2>`;
-        selectedStyle.contests.forEach(id => {
-            const item = contentLibrary[id];
+        
+        // Fix 2: Use "element_ids" instead of "contests"
+        selectedStyle.element_ids.forEach(id => {
+            // Fix 3: Search inside contentData.contests for the matching element_id
+            const itemKey = Object.keys(contentData.contests).find(key => 
+                contentData.contests[key].element_id === id
+            );
+            const item = contentData.contests[itemKey];
+
             if (item) {
                 html += `<div class="contest-card">
-                    <h3>${id.replace(/_/g, ' ')}</h3>
-                    <p>${item.description || item.legal_text || ''}</p>
+                    <h3>${item.title || itemKey.replace(/_/g, ' ')}</h3>
+                    <p>${item.ballot_language || ''}</p>
                     ${renderDetails(item)}
                 </div>`;
             }
@@ -60,20 +41,6 @@ async function handleSubmission() {
         resultDiv.classList.remove('hidden');
 
     } catch (err) {
-        errorDiv.innerHTML = `<div class="error-box">Error loading data: ${err.message}</div>`;
+        errorDiv.innerHTML = `<div class="error-box">Error: ${err.message}</div>`;
         errorDiv.classList.remove('hidden');
     }
-}
-
-function renderDetails(item) {
-    if (item.type === 'candidate') {
-        return item.candidates.map(c => `
-            <div style="margin-bottom:10px;">
-                <strong>${c.name}</strong> - <a href="${c.link}" target="_blank">View Bio</a>
-                <p style="font-size:0.9em; color:#666;">${c.notes}</p>
-            </div>
-        `).join('');
-    }
-    return `<p><strong>Explanation:</strong> ${item.explanation}</p>
-            <a href="${item.resource_link}" target="_blank">Full Proposition Text</a>`;
-}
