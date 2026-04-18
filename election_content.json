@@ -1,4 +1,623 @@
-"element_id_66": {
+{
+  "element_id_1": {
+    "type": "race",
+    "jurisdiction": "City of Bartlett",
+    "title": "City Council, Two-Year Term",
+    "selection_rule": "Vote for none, one, or two",
+    "candidates": [
+      { "name": "Jackie Ivicic", "arguments_for": [], "arguments_against": [] },
+      { "name": "Jennifer Tucker", "arguments_for": [], "arguments_against": [] },
+      { "name": "Ruth Diaz", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_2": {
+    "type": "race",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Mayor",
+    "selection_rule": "Vote for none or one",
+    "candidates": [
+      { "name": "Jim Penniman-Morin", "arguments_for": [], "arguments_against": [] },
+      { "name": "Dean Doscher", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_3": {
+    "type": "race",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Council Place Two",
+    "selection_rule": "Vote for none or one",
+    "candidates": [
+      { "name": "Mel Kirkland", "arguments_for": [], "arguments_against": [] },
+      { "name": "Darron Jurajda", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_4": {
+    "type": "race",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Council Place Four",
+    "selection_rule": "Vote for none or one",
+    "candidates": [
+      { "name": "Michael Endres", "arguments_for": [], "arguments_against": [] },
+      { "name": "Kevin O'Bryan", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_5": {
+    "type": "race",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Council Place Six",
+    "selection_rule": "Vote for none or one",
+    "candidates": [
+      { "name": "Randy Strader", "arguments_for": [], "arguments_against": [] },
+      { "name": "Shweta Padmanabha", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_6": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition A: Boundaries",
+    "summary": "Authorize extension and contraction of boundaries in accordance with state law.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_7": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition B: General Authority",
+    "summary": "Clarify general authority as a home rule municipality.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_8": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition C: Eminent Domain",
+    "summary": "Require just compensation for property acquired by condemnation.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_9": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition D: Compensation",
+    "summary": "Amend monthly compensation for Council ($1,000) and Mayor ($1,500).",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_10": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition E: Plats",
+    "summary": "Remove reference to 'plats' in accordance with state law.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_11": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition F: Vacancies",
+    "summary": "Remove deadline for adoption of procedure to fill vacancies.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_12": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition G: Revolving Door",
+    "summary": "Extend prohibition on City employment from 1 to 2 years after office.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_13": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition H: Petitions",
+    "summary": "Remove signature validity requirements per state law.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_14": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition I: Ordinances",
+    "summary": "Remove redundant vote requirement for emergency ordinances.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_15": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition J: City Attorney",
+    "summary": "Expressly provide for representation in all litigation.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_16": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition K: Voter List",
+    "summary": "Remove requirement for City Secretary to maintain eligibility list.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_17": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition L: Charter Review",
+    "summary": "Allow 7 or 15 member citizen committees.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_18": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition M: Recall Election",
+    "summary": "Remove delegation of duties to County Judge.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_19": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition N: Prohibitions",
+    "summary": "Consolidate and clarify general prohibition provisions.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_20": {
+    "type": "issue",
+    "jurisdiction": "City of Cedar Park",
+    "title": "Proposition O: Notices",
+    "summary": "Allow publication notices in accordance with state law.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_21": {
+    "type": "race",
+    "jurisdiction": "City of Florence",
+    "title": "Mayor",
+    "selection_rule": "Vote for one",
+    "candidates": [
+      { "name": "David Merideth", "arguments_for": [], "arguments_against": [] },
+      { "name": "Ben Daniel", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_22": {
+    "type": "race",
+    "jurisdiction": "City of Florence",
+    "title": "Alderpersons",
+    "selection_rule": "Vote for none, one, or two",
+    "candidates": [
+      { "name": "Ashley Gilland", "arguments_for": [], "arguments_against": [] },
+      { "name": "Jose R. Perez", "arguments_for": [], "arguments_against": [] },
+      { "name": "Renee Morgan", "arguments_for": [], "arguments_against": [] },
+      { "name": "Forrest Hyde", "arguments_for": [], "arguments_against": [] },
+      { "name": "Luiz Dunham", "arguments_for": [], "arguments_against": [] },
+      { "name": "Brett Banks", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_23": {
+    "type": "race",
+    "jurisdiction": "City of Georgetown",
+    "title": "City Council District 6",
+    "selection_rule": "Vote for one",
+    "candidates": [
+      { "name": "Emily Kaye Kipp", "arguments_for": [], "arguments_against": [] },
+      { "name": "Jake French", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_24": {
+    "type": "issue",
+    "jurisdiction": "City of Georgetown",
+    "title": "Proposition A: Water Sale",
+    "summary": "Sale of water utility system for not less than $20,000,000.00.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_25": {
+    "type": "race",
+    "jurisdiction": "City of Granger",
+    "title": "City Council",
+    "selection_rule": "Vote for none, one, or two",
+    "candidates": [
+      { "name": "Lori Gick", "arguments_for": [], "arguments_against": [] },
+      { "name": "Ron Marx", "arguments_for": [], "arguments_against": [] },
+      { "name": "Mark Matoska", "arguments_for": [], "arguments_against": [] },
+      { "name": "Denise Stefek", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_26": {
+    "type": "race",
+    "jurisdiction": "City of Hutto",
+    "title": "Council Place 1",
+    "selection_rule": "Vote for one",
+    "candidates": [
+      { "name": "Jerrel W. Reynolds", "arguments_for": [], "arguments_against": [] },
+      { "name": "Morgan Renee Luiz Dunham", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_27": {
+    "type": "race",
+    "jurisdiction": "City of Hutto",
+    "title": "Council Place 4",
+    "selection_rule": "Vote for one",
+    "candidates": [
+      { "name": "Brandon DeLeon", "arguments_for": [], "arguments_against": [] },
+      { "name": "Corina I. Zepeda", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_28": {
+    "type": "issue",
+    "jurisdiction": "City of Liberty Hill",
+    "title": "Proposition A: Sales Tax",
+    "summary": "Reauthorization of 0.25% sales tax for street maintenance.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_29": {
+    "type": "race",
+    "jurisdiction": "City of Round Rock",
+    "title": "Mayor",
+    "selection_rule": "Vote for none or one",
+    "candidates": [
+      { "name": "Kelly Hall", "arguments_for": [], "arguments_against": [] },
+      { "name": "Sarosh Jafri", "arguments_for": [], "arguments_against": [] },
+      { "name": "Brandy McCool", "arguments_for": [], "arguments_against": [] },
+      { "name": "Craig Morgan", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_30": {
+    "type": "race",
+    "jurisdiction": "City of Round Rock",
+    "title": "Council Place 1",
+    "selection_rule": "Vote for one",
+    "candidates": [
+      { "name": "Michelle Ly", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_31": {
+    "type": "race",
+    "jurisdiction": "City of Round Rock",
+    "title": "Council Place 4",
+    "selection_rule": "Vote for one",
+    "candidates": [
+      { "name": "Hilda Montgomery", "arguments_for": [], "arguments_against": [] },
+      { "name": "Josh Baker", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_32": {
+    "type": "issue",
+    "jurisdiction": "City of Round Rock",
+    "title": "Proposition A: Message Centers",
+    "summary": "Allowing 12 electronic message centers on private property.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_33": {
+    "type": "issue",
+    "jurisdiction": "City of Round Rock",
+    "title": "Proposition B: Fire Staffing",
+    "summary": "Requirement to implement NFPA 1710 staffing levels.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_34": {
+    "type": "race",
+    "jurisdiction": "City of Taylor",
+    "title": "Mayor",
+    "selection_rule": "Vote for none or one",
+    "candidates": [
+      { "name": "Sandra O. Wolff", "arguments_for": [], "arguments_against": [] },
+      { "name": "Taylor Stubbs", "arguments_for": [], "arguments_against": [] },
+      { "name": "Jim Buzan", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_35": {
+    "type": "issue",
+    "jurisdiction": "City of Thrall",
+    "title": "Proposition A: Sales Tax",
+    "summary": "Reauthorization of 0.25% street maintenance tax.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_36": {
+    "type": "race",
+    "jurisdiction": "Bartlett ISD",
+    "title": "Trustee",
+    "selection_rule": "Vote for none, one, or two",
+    "candidates": [
+      { "name": "Nicole Sharp", "arguments_for": [], "arguments_against": [] },
+      { "name": "Joshua Spieglehauer", "arguments_for": [], "arguments_against": [] },
+      { "name": "Zachary Buchhorn", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_37": {
+    "type": "issue",
+    "jurisdiction": "Bartlett ISD",
+    "title": "Proposition A: Building Bonds",
+    "amount": "$12,500,000",
+    "impact": "Property Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_38": {
+    "type": "issue",
+    "jurisdiction": "Bartlett ISD",
+    "title": "Proposition B: Refunding Bonds",
+    "amount": "$3,300,000",
+    "impact": "Property Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_39": {
+    "type": "issue",
+    "jurisdiction": "Bartlett ISD",
+    "title": "Proposition C: Time Warrants",
+    "amount": "$1,000,000",
+    "impact": "Property Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_40": {
+    "type": "race",
+    "jurisdiction": "Granger ISD",
+    "title": "Trustee",
+    "selection_rule": "Vote for no more than three",
+    "candidates": [
+      { "name": "Ricky Luna", "arguments_for": [], "arguments_against": [] },
+      { "name": "Jen David", "arguments_for": [], "arguments_against": [] },
+      { "name": "David Tucker", "arguments_for": [], "arguments_against": [] },
+      { "name": "Daryl J. Stefek", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_41": {
+    "type": "race",
+    "jurisdiction": "Hutto ISD",
+    "title": "Board of Trustees",
+    "selection_rule": "Vote for none, one, or two",
+    "candidates": [
+      { "name": "Felix Chavez", "arguments_for": [], "arguments_against": [] },
+      { "name": "April Adams", "arguments_for": [], "arguments_against": [] },
+      { "name": "Samantha Martinez", "arguments_for": [], "arguments_against": [] },
+      { "name": "Taylor Lopez", "arguments_for": [], "arguments_against": [] },
+      { "name": "Lynn Green", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_42": {
+    "type": "race",
+    "jurisdiction": "Liberty Hill ISD",
+    "title": "Board of Trustees, Place 1",
+    "selection_rule": "Vote for one or none",
+    "candidates": [
+      { "name": "Kevin J. Weber", "arguments_for": [], "arguments_against": [] },
+      { "name": "Chris Neighbors", "arguments_for": [], "arguments_against": [] },
+      { "name": "Albert Kennedy", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_43": {
+    "type": "race",
+    "jurisdiction": "Liberty Hill ISD",
+    "title": "Board of Trustees, Place 2",
+    "selection_rule": "Vote for one or none",
+    "candidates": [
+      { "name": "Kendall Carter", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_44": {
+    "type": "race",
+    "jurisdiction": "Liberty Hill ISD",
+    "title": "Board of Trustees, Place 4",
+    "selection_rule": "Vote for one or none",
+    "candidates": [
+      { "name": "Jamie Etzkorn", "arguments_for": [], "arguments_against": [] },
+      { "name": "Sharon Yager", "arguments_for": [], "arguments_against": [] },
+      { "name": "Antonio Canas", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_45": {
+    "type": "race",
+    "jurisdiction": "Thrall ISD",
+    "title": "Trustee At Large",
+    "selection_rule": "Vote for none, one, or two",
+    "candidates": [
+      { "name": "Bryan Holubec", "arguments_for": [], "arguments_against": [] },
+      { "name": "Jason Seaton", "arguments_for": [], "arguments_against": [] },
+      { "name": "Ashley Harper", "arguments_for": [], "arguments_against": [] },
+      { "name": "Joshua Seagroves", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_46": {
+    "type": "race",
+    "jurisdiction": "Ranch at Cypress Creek MUD No. 1",
+    "title": "Director",
+    "selection_rule": "Vote for none, one, or two",
+    "candidates": [
+      { "name": "Stephan Zaparolli", "arguments_for": [], "arguments_against": [] },
+      { "name": "James E. Perrone", "arguments_for": [], "arguments_against": [] },
+      { "name": "Patrice Coles", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_47": {
+    "type": "issue",
+    "jurisdiction": "River Ranch MUD No. 1",
+    "title": "Proposition A: Confirmation",
+    "summary": "Confirmation of creation of district.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_48": {
+    "type": "issue",
+    "jurisdiction": "River Ranch MUD No. 1",
+    "title": "Proposition B: Maintenance Tax",
+    "summary": "Tax not to exceed $1.20 per $100 valuation.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_49": {
+    "type": "race",
+    "jurisdiction": "River Ranch MUD No. 1",
+    "title": "Directors",
+    "selection_rule": "Vote for five",
+    "candidates": [
+      { "name": "Blake Reed", "arguments_for": [], "arguments_against": [] },
+      { "name": "Omar Ortega", "arguments_for": [], "arguments_against": [] },
+      { "name": "Jason Huf", "arguments_for": [], "arguments_against": [] },
+      { "name": "Rosangel Rodriguez", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_50": {
+    "type": "issue",
+    "jurisdiction": "Rivina MUD",
+    "title": "Proposition A: Creation",
+    "summary": "Confirmation of creation of district.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_51": {
+    "type": "race",
+    "jurisdiction": "Rivina MUD",
+    "title": "Directors",
+    "selection_rule": "Vote for none, one, two, three, four, or five",
+    "candidates": [
+      { "name": "Lance Jenkins", "arguments_for": [], "arguments_against": [] },
+      { "name": "Albert Bedia", "arguments_for": [], "arguments_against": [] },
+      { "name": "Clarke Nolley", "arguments_for": [], "arguments_against": [] },
+      { "name": "Julia Kerr", "arguments_for": [], "arguments_against": [] },
+      { "name": "Hunter Chamberlain", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_52": {
+    "type": "issue",
+    "jurisdiction": "Rivina MUD",
+    "title": "Proposition B: Utility Bonds",
+    "amount": "$295,500,000",
+    "impact": "Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_53": {
+    "type": "issue",
+    "jurisdiction": "Rivina MUD",
+    "title": "Proposition C: Refunding Bonds",
+    "amount": "$369,375,000",
+    "impact": "Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_54": {
+    "type": "issue",
+    "jurisdiction": "Rivina MUD",
+    "title": "Proposition D: Road Bonds",
+    "amount": "$183,500,000",
+    "impact": "Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_55": {
+    "type": "issue",
+    "jurisdiction": "Rivina MUD",
+    "title": "Proposition E: Road Refunding",
+    "amount": "$229,375,000",
+    "impact": "Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_56": {
+    "type": "issue",
+    "jurisdiction": "Rivina MUD",
+    "title": "Proposition F: Park Bonds",
+    "amount": "$8,320,021",
+    "impact": "Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_57": {
+    "type": "issue",
+    "jurisdiction": "Rivina MUD",
+    "title": "Proposition G: Park Refunding",
+    "amount": "$10,400,027",
+    "impact": "Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_58": {
+    "type": "issue",
+    "jurisdiction": "Rivina MUD",
+    "title": "Proposition H: Maintenance Tax",
+    "summary": "Tax not to exceed $1.20 per $100.",
+    "impact": "Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_59": {
+    "type": "race",
+    "jurisdiction": "Watch Hill MUD",
+    "title": "Directors",
+    "selection_rule": "Vote for five",
+    "candidates": [
+      { "name": "Lindsey Walker", "arguments_for": [], "arguments_against": [] },
+      { "name": "Cameron Krog", "arguments_for": [], "arguments_against": [] },
+      { "name": "Michael Koch", "arguments_for": [], "arguments_against": [] },
+      { "name": "John McCown", "arguments_for": [], "arguments_against": [] },
+      { "name": "Robert Denham", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_60": {
+    "type": "issue",
+    "jurisdiction": "Williamson and Bell Counties MUD No. 1",
+    "title": "Proposition A: Creation",
+    "summary": "Confirmation of creation.",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_61": {
+    "type": "race",
+    "jurisdiction": "Williamson and Bell Counties MUD No. 1",
+    "title": "Directors",
+    "selection_rule": "Vote for five",
+    "candidates": [
+      { "name": "Ron Lusk", "arguments_for": [], "arguments_against": [] },
+      { "name": "Robert Norris", "arguments_for": [], "arguments_against": [] },
+      { "name": "Paul Otte", "arguments_for": [], "arguments_against": [] },
+      { "name": "Jamison Stewart", "arguments_for": [], "arguments_against": [] },
+      { "name": "Megan Turnipseed", "arguments_for": [], "arguments_against": [] }
+    ]
+  },
+  "element_id_62": {
+    "type": "issue",
+    "jurisdiction": "Williamson and Bell Counties MUD No. 1",
+    "title": "Proposition B: Sewer Bonds",
+    "amount": "$307,500,000",
+    "impact": "Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_63": {
+    "type": "issue",
+    "jurisdiction": "Williamson and Bell Counties MUD No. 1",
+    "title": "Proposition C: Refunding Sewer",
+    "summary": "Refunding for sewer and drainage bonds.",
+    "impact": "Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_64": {
+    "type": "issue",
+    "jurisdiction": "Williamson and Bell Counties MUD No. 1",
+    "title": "Proposition D: Road Bonds",
+    "amount": "$143,750,000",
+    "impact": "Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_65": {
+    "type": "issue",
+    "jurisdiction": "Williamson and Bell Counties MUD No. 1",
+    "title": "Proposition E: Maintenance Tax",
+    "summary": "Tax for operation and maintenance.",
+    "impact": "Tax Increase",
+    "arguments_for": [],
+    "arguments_against": []
+  },
+  "element_id_66": {
     "type": "race",
     "jurisdiction": "Liberty Hill Public Library District",
     "title": "Board of Trustees",
