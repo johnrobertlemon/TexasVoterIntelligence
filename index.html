@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
     <title>Texas Voter Intelligence | Ballot Decoder</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root { --primary-blue: #002d72; --border-soft: #e2e8f0; }
+        body { font-family: sans-serif; color: #1a202c; }
+        .ballot-item { border-radius: 8px; transition: transform 0.2s ease; }
+        .ballot-item:hover { transform: translateY(-2px); }
+        .dash-border { border: 2px dashed var(--border-soft) !important; }
+        .reference-link { font-size: 0.85rem; transition: color 0.2s; }
+        .reference-link:hover { color: #0056b3; }
+    </style>
 </head>
 <body class="bg-light">
-<!-- new version 0 -->
+
     <header class="navbar navbar-dark sticky-top bg-dark p-3 shadow-sm">
         <div class="container d-flex justify-content-between">
             <a class="navbar-brand fw-bold" href="#">Texas Voter Intelligence</a>
-            <span class="navbar-text text-uppercase small text-secondary">
-                Objective Election Data
-            </span>
+            <span class="navbar-text text-uppercase small text-secondary">Non-Partisan Data</span>
         </div>
     </header>
 
@@ -26,30 +32,21 @@
             <div class="col-lg-8">
                 
                 <div class="card shadow-sm border-0 mb-5">
-                    <div class="card-body p-4 p-md-5">
-                        <h1 class="h3 fw-bold text-center mb-3">Ballot Decoder</h1>
-                        <p class="text-muted text-center mb-4">
-                            If you have your <strong>Ballot Style Number</strong> from the County Elections site, 
-                            enter it below to generate your personalized intelligence briefing.
-                        </p>
+                    <div class="card-body p-4 p-md-5 text-center">
+                        <h1 class="h3 fw-bold mb-3">Ballot Decoder</h1>
+                        <p class="text-muted mb-4">Enter your <strong>Ballot Style Number</strong> to generate your briefing.</p>
                         
                         <div class="input-group input-group-lg mb-3 mx-auto" style="max-width: 450px;">
                             <span class="input-group-text bg-white font-monospace">ID:</span>
-                            <input type="text" id="ballot-style-input" class="form-control" placeholder="e.g. BS12" aria-label="Ballot Style Number">
+                            <input type="text" id="ballot-style-input" class="form-control" placeholder="e.g. BS12" aria-label="Ballot Style">
                             <button class="btn btn-primary px-4" type="button" onclick="fetchAndRenderBallot()">Decode</button>
-                        </div>
-                        
-                        <div class="text-center mt-3">
-                            <small class="text-muted">
-                                Don't have your number? <a href="#" class="text-decoration-none">Instructions for finding your Ballot Style →</a>
-                            </small>
                         </div>
                     </div>
                 </div>
 
                 <div id="ballot-container">
-                    <div class="text-center p-5 text-muted bg-white rounded border border-dashed">
-                        <p class="mb-0"><em>Waiting for Ballot Style Input...</em></p>
+                    <div class="text-center p-5 text-muted bg-white rounded border dash-border">
+                        <em>Waiting for Ballot Style Input...</em>
                     </div>
                 </div>
 
@@ -57,98 +54,101 @@
         </div>
     </main>
 
-    <footer class="footer mt-auto py-4 bg-white border-top">
-        <div class="container text-center">
-            <p class="text-muted mb-0 small">© 2026 Texas Voter Intelligence Project. Non-partisan and politically neutral.</p>
-            <p class="text-muted small">Data Version: May 2026 Williamson County Municipal/MUD Elections</p>
-        </div>
-    </footer>
+    <script>
+        async function fetchAndRenderBallot() {
+            const inputField = document.getElementById('ballot-style-input');
+            const container = document.getElementById('ballot-container');
+            let rawInput = inputField.value.trim();
 
- <script>
-    /**
-     * Texas Voter Intelligence Decoder
-     */
-    async function fetchAndRenderBallot() {
-        const inputField = document.getElementById('ballot-style-input');
-        const container = document.getElementById('ballot-container');
-        let rawInput = inputField.value.trim();
-
-        if (!rawInput) {
-            alert("Please enter a Ballot Style number.");
-            return;
-        }
-
-        // Regex to find the last sequence of digits and pad them
-        const match = rawInput.match(/(\d+)$/);
-        if (!match) {
-            container.innerHTML = `<div class="alert alert-warning">No number found in "${rawInput}".</div>`;
-            return;
-        }
-
-        let styleNum = match[1];
-        if (styleNum.length === 1) styleNum = "0" + styleNum;
-        const bsKey = "BS" + styleNum;
-
-        container.innerHTML = `<div class="text-center p-5"><div class="spinner-border text-primary"></div><p class="mt-2 text-muted">Decoding: ${bsKey}</p></div>`;
-
-        try {
-            const [mappingRes, contentRes] = await Promise.all([
-                fetch('./precinct_ballot_style.json'),
-                fetch('./election_content.json')
-            ]);
-
-            const styleMapping = await mappingRes.json();
-            const electionContent = await contentRes.json();
-
-            const mappingEntry = styleMapping.ballot_style_mapping[bsKey];
-
-            if (!mappingEntry) {
-                container.innerHTML = `<div class="alert alert-warning text-center">Style "${bsKey}" not found.</div>`;
+            if (!rawInput) {
+                alert("Please enter a Ballot Style number.");
                 return;
             }
 
-            const ballotData = mappingEntry.element_ids.map(id => electionContent[id]);
-            
-            // This is the function the error said was missing:
-            renderBallotPage(ballotData, container);
-
-        } catch (error) {
-            console.error("System Error:", error);
-            container.innerHTML = `<div class="alert alert-danger text-center">System Error: ${error.message}</div>`;
-        }
-    }
-
-    // Ensure this function is defined within the same <script> tag
-    function renderBallotPage(data, container) {
-        container.innerHTML = ''; // Clear spinner
-
-        data.forEach(item => {
-            if (!item) return; // Skip if element_id doesn't exist in content
-            
-            const card = document.createElement('div');
-            card.className = 'ballot-item card mb-4 p-4 shadow-sm bg-white border-0';
-            
-            if (item.type === 'race') {
-                card.innerHTML = `
-                    <span class="badge bg-primary mb-2">${item.jurisdiction}</span>
-                    <h2 class="h4 fw-bold text-dark">${item.title}</h2>
-                    <p class="text-muted small italic mb-3">${item.selection_rule}</p>
-                    <div class="list-group list-group-flush">
-                        ${item.candidates.map(c => `<div class="list-group-item border-0 ps-0">• ${c.name}</div>`).join('')}
-                    </div>`;
-            } else {
-                card.innerHTML = `
-                    <span class="badge bg-secondary mb-2">${item.jurisdiction}</span>
-                    <h2 class="h4 fw-bold text-dark">${item.title}</h2>
-                    <div class="mt-3">
-                        <p class="mb-2">${item.summary}</p>
-                        ${item.impact ? `<span class="badge bg-danger mb-2">${item.impact}</span>` : ''}
-                        ${item.amount ? `<p class="mt-2 fw-bold text-danger h5">Bond Amount: ${item.amount}</p>` : ''}
-                    </div>`;
+            // Regex: Discard prepended text, grab last digits, pad to two digits
+            const match = rawInput.match(/(\d+)$/);
+            if (!match) {
+                container.innerHTML = `<div class="alert alert-warning">No style number found in "${rawInput}".</div>`;
+                return;
             }
-            container.appendChild(card);
-        });
-    }
-</script>
+
+            let styleNum = match[1];
+            if (styleNum.length === 1) styleNum = "0" + styleNum;
+            const bsKey = "BS" + styleNum;
+
+            container.innerHTML = `<div class="text-center p-5"><div class="spinner-border text-primary"></div><p class="mt-2 text-muted">Decoding Style: ${bsKey}</p></div>`;
+
+            try {
+                const [mappingRes, contentRes] = await Promise.all([
+                    fetch('./precinct_ballot_style.json'),
+                    fetch('./election_content.json')
+                ]);
+
+                const styleMapping = await mappingRes.json();
+                const electionContent = await contentRes.json();
+
+                const mappingEntry = styleMapping.ballot_style_mapping[bsKey];
+                if (!mappingEntry) {
+                    container.innerHTML = `<div class="alert alert-warning text-center">Style "${bsKey}" not found in May 2026 data.</div>`;
+                    return;
+                }
+
+                const ballotData = mappingEntry.element_ids.map(id => electionContent[id]);
+                renderBallotPage(ballotData, container);
+
+            } catch (error) {
+                console.error("System Error:", error);
+                container.innerHTML = `<div class="alert alert-danger text-center">Error: ${error.message}</div>`;
+            }
+        }
+
+        function renderBallotPage(data, container) {
+            container.innerHTML = '';
+
+            data.forEach(item => {
+                if (!item) return;
+                const card = document.createElement('div');
+                card.className = 'ballot-item card mb-4 p-4 shadow-sm bg-white border-0';
+                
+                // General Information Logic
+                let genInfoHtml = '';
+                if (item.general_information && item.general_information.length > 0) {
+                    genInfoHtml = `
+                        <div class="mt-3 pt-3 border-top">
+                            <small class="text-muted fw-bold text-uppercase" style="font-size: 0.65rem;">Reference & News Context:</small>
+                            <ul class="list-unstyled mb-0 mt-1">
+                                ${item.general_information.map(link => `
+                                    <li class="mb-1">
+                                        <a href="${link.url}" target="_blank" class="text-decoration-none reference-link">
+                                            🔗 ${link.label || 'Read Article'}
+                                        </a>
+                                    </li>`).join('')}
+                            </ul>
+                        </div>`;
+                }
+
+                if (item.type === 'race') {
+                    card.innerHTML = `
+                        <span class="badge bg-primary mb-2" style="width:fit-content">${item.jurisdiction}</span>
+                        <h2 class="h4 fw-bold text-dark">${item.title}</h2>
+                        <p class="text-muted small italic mb-3">${item.selection_rule}</p>
+                        <div class="list-group list-group-flush mb-2">
+                            ${item.candidates.map(c => `<div class="list-group-item border-0 ps-0 pe-0 d-flex align-items-center"><span class="me-2 text-primary">●</span> ${c.name}</div>`).join('')}
+                        </div>
+                        ${genInfoHtml}`;
+                } else {
+                    card.innerHTML = `
+                        <span class="badge bg-secondary mb-2" style="width:fit-content">${item.jurisdiction}</span>
+                        <h2 class="h4 fw-bold text-dark">${item.title}</h2>
+                        <div class="mt-3">
+                            <p class="mb-2">${item.summary}</p>
+                            ${item.amount ? `<p class="mt-2 fw-bold text-danger h5">Bond Amount: ${item.amount}</p>` : ''}
+                        </div>
+                        ${genInfoHtml}`;
+                }
+                container.appendChild(card);
+            });
+        }
+    </script>
 </body>
 </html>
